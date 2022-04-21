@@ -17,18 +17,44 @@ const Home = () => {
 	// 	Button
 	// </button>
 
+	const [shadow, setShadow] = useState("");
+	console.log(shadow);
+
 	return (
 		<div>
-			<div id="trafficTop"></div>
-			<div className="container">
-				<div className="red light">
-					<button className="btn btn-danger"></button>
-				</div>
-				<div className="yellow light">
-					<button className="btn btn-warning"></button>
-				</div>
-				<div className="green light">
-					<button className="btn btn-success"></button>
+			<div className="trafficTop container d-flex justify-content-center"></div>
+			<div className="caja container d-flex justify-content-center">
+				<div className="row row-cols-1 mt-1 mb-1">
+					<div
+						className="d-flex justify-content-center redlight col"
+						onClick={() => setShadow("red")}>
+						<button
+							className={
+								"button btn btn-danger disabled" +
+								" " +
+								(shadow === "red" ? "buttonshadow" : "")
+							}></button>
+					</div>
+					<div
+						className="d-flex justify-content-center yellowlight col"
+						onClick={() => setShadow("yellow")}>
+						<button
+							className={
+								"button btn btn-warning disabled" +
+								" " +
+								(shadow === "yellow" ? "buttonshadow" : "")
+							}></button>
+					</div>
+					<div
+						className="d-flex justify-content-center greenlight col"
+						onClick={() => setShadow("green")}>
+						<button
+							className={
+								"button btn btn-success disabled" +
+								" " +
+								(shadow === "green" ? "buttonshadow" : "")
+							}></button>
+					</div>
 				</div>
 			</div>
 		</div>
