@@ -1,22 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	// const [color, setColor] = useState("btn-primary");
-
-	// function changeColor() {
-	// 	color === "btn-primary"
-	// 		? setColor("btn-danger")
-	// 		: setColor("btn-primary");
-	// }
-	// <button className={"btn " + color} onClick={changeColor}>
-	// 	Button
-	// </button>
-
+	
 	const [shadow, setShadow] = useState("");
 	console.log(shadow);
 
